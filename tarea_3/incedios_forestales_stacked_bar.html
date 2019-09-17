@@ -2,10 +2,40 @@
 <html>
 <body>
 
-<h1>Viz </h1>
-<p>En desarollo ...</p>
-
 <div class='tableauPlaceholder' id='viz1568697700907' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ta&#47;Tarea3_15686966423520&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Tarea3_15686966423520&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ta&#47;Tarea3_15686966423520&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1568697700907');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='1000px';vizElement.style.height='827px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+<div class="chart-footer">By <a href="https://twitter.com/OscarAcero_Tato">Oscar Eduardo Acero Acero</a>.
+    <br>
+    <strong>Source</strong>: <a href="https://www.datos.gov.co/Estad-sticas-Nacionales/Reporte-Datos-Abiertos-Incendios-Forestales-Uaegrd/mq2u-5dd7">Datos de los incendios forestales ocurridos en el departamento de Cundinamarca.</a>
+  </div>
+
+<p></p>
+<p></p>
+
+<div>
+<p>Se realiza un análisis del What?, el Why? y el How? propuestos en el framework de Tamara para diseñar una visualización.</p>
+<p></p>
+
+<p>La anterior viz permite hacer una revisón de los tipos de terreno más afectados por incendios forestales en Cundinamarca, además de identificar cuáles
+cuáles son los municipios con mayor cantidad de hectáreas comprometidas.</p>
+
+<div><p>Tareas en el dominio del contexto:</p>
+<ul>
+<li>T1(Principal): Descubrir los tipos de terreno más afectado por incendios forestales en Cundinamarca </li>
+<li>T2(Secundaria): Identificar los municipios con mayor afectada por incendios forestales</li>
+<li>T3(Secundaria): Explorar por municipio la cantidad de hectáreas afectadas por tipo de terreno.</li>
+</ul></div>
+
+<div><h4 id="what-">What?</h4>
+<p>Se tiene un <a href="https://www.datos.gov.co/Estad-sticas-Nacionales/Reporte-Datos-Abiertos-Incendios-Forestales-Uaegrd/mq2u-5dd7">dataset</a> de tipo table (no se usan los campos fecha), donde cada ítem corresponde a un evento de incedio forestal reportado:</p>
+<ul>
+<li>Categóricos: Municipio, Corregimiento, Superficial, Subterráneo</li>
+<li>Ordinales:Fecha de reporte, Fecha de terminación, Hora de terminación </li>
+<li>Cuantitativos secuenciales: Bosque nativo denso, Bosque intervenido, Bosque plantado,  Bosque seco,  Cultivos, Páramos,  Sabanas y pastizales, Pastos mejorados, Rastrojo, Área total. Adicionalmente, se calculó la variable derivada "Otros" donde se agrupan los tipo de terreno con menos del 5% de observaciones </li>
+<li>Para la visualización se usaron las variables Municipio, Área total, Bosque nativo denso, Sabanas y pastizales, Pastos mejorados, Rastrojo y Otros.</li>
+</ul></div>
+
+</div>
+
 
 </html>
 
