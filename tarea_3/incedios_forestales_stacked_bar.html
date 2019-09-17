@@ -20,9 +20,9 @@ cuáles son los municipios con mayor cantidad de hectáreas comprometidas.</p>
 
 <div><p>Tareas en el dominio del contexto:</p>
 <ul>
-<li>T1(Principal): Descubrir los tipos de terreno más afectado por incendios forestales en Cundinamarca </li>
+<li>T1(Principal): Descubrir el tipo de terreno más afectado por incendios forestales en Cundinamarca </li>
 <li>T2(Secundaria): Identificar los municipios con mayor afectada por incendios forestales</li>
-<li>T3(Secundaria): Explorar por municipio la cantidad de hectáreas afectadas por tipo de terreno.</li>
+<li>T3(Secundaria): Buscar por municipio la cantidad de hectáreas afectadas por tipo de terreno.</li>
 </ul></div>
 
 <div><h4 id="what-">What?</h4>
@@ -36,6 +36,61 @@ cuáles son los municipios con mayor cantidad de hectáreas comprometidas.</p>
 
 </div>
 
+<div><h4 id="why-">Why?</h4>
+<ul>
+<li>T1(Action:Discover, Target:Extreme) - Para un conjunto de variables cuantitativas (tipos de terreno), descubrir cual tiene el valor(hectáreas) global más alto.</li>
+<li>T2(Action:Indentify, Target:Extremes) - Para una variable categórica (municipio), identificar los n ítems con mayor valor asociado a una variable cuantitativa secuencial (área total).</li>
+<li>T3(Action:Browse, Target:Value) - Para una variable categórica (municipio), buscar los valores asociados a múltiples variables cuantitativas secuenciales (tipos de terreno)</li>
+
+</ul></div>
+
+</div>
+
+
+<div><h4 id="how-">How?</h4>
+
+<div><h4 id="encode">Encode</h4>
+<h5 id="map">Map</h5>
+<ul>
+<li>Mark: Line</li>
+<li>Channel: Spatial region en y para municipio</li>
+<li>Channel: Length en x para cantidad de hectáreas </li>
+<li>Channel: Color hue para tipo de terreno </li>
+<li>Idiom: Stacked bar chart separate, order and align</li>
+</ul></div>
+
+</div>
+
+<div><h4 id="encode">Comentarios</h4>
+<div>
+<p>Analizando más allá del insight descrito en el encabezado,se encuentra que a pesar de que a nivel global hay una mayor afectación en terrenos de sabanas, pastizales y 
+bosque nativo, a nivel de cada municipio no siempre se mantiene ese comportamiento.</p>
+<p>La visualización podría mejorarse, agregando elementos que permitan descubrir alguna relación o patrón entre los municipios afectados; 
+como ubicación geográfica, clima, actividad económica, entre otros. También podría indicarse la cantidad de incendios reportados para cada tipo de terreno, así como un resumen de las cifras globales.
+</p>
+</div>
+
+<div>
+<br> MIT License </br>
+<br> Copyright (c) 2019 Oscar Acero.</br>
+<br>
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</br>
+</div>
 
 </html>
 
