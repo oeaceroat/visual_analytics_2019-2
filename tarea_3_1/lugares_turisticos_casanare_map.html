@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class='tableauPlaceholder' id='viz1569295626575' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Z3&#47;Z36JTRT3D&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;Z36JTRT3D' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Z3&#47;Z36JTRT3D&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1569295626575');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+<div class="chart-footer">By <a href="https://twitter.com/OscarAcero_Tato">Oscar Eduardo Acero Acero</a>.
+    <br>
+    <strong>Source</strong>: <a href="https://www.datos.gov.co/Comercio-Industria-y-Turismo/Sitios-Tur-sticos-del-departamento-de-Casanare/tceq-3ger/data">Ubicación sitios turísticos de Casanare.</a>
+  </div>
+
+<p></p>
+<p></p>
+
+<div>
+<p>Se realiza un análisis del What?, el Why? y el How? propuestos en el framework de Tamara para diseñar una visualización.</p>
+<p></p>
+
+<p>La anterior viz permite realizar un análisis de la ubicación geográfica de los sitios turísticos del departamento de Casanare.</p>
+
+<div><p>Tareas en el dominio del contexto:</p>
+<ul>
+<li>T1(Principal): Presentar la distribución geográfica de los lugares turísticos de Casanare </li>
+<li>T2(Secundaria):Identificar zonas de Casanare con concentración de lugares turísticos. </li>
+<li>T3(Secundaria): Buscar lugares turísticos de un municipio específico.  </li>
+</ul></div>
+
+<div><h4 id="what-">What?</h4>
+<p>Se tiene un <a href="https://www.datos.gov.co/Comercio-Industria-y-Turismo/Sitios-Tur-sticos-del-departamento-de-Casanare/tceq-3ger/data">dataset</a> de tipo spacial (en formato de tabla), donde cada ítem corresponde a la ubicación e información adicional de los lugares turísticos del departamento de Casanare:</p>
+<ul>
+<li>Categóricos: Zona(Rural o Urbana) y Municipio</li>
+<li>Cuantitativos divergente: Latitud, Logitud </li>
+<li>Texto: Sitio (Nombre del lugar turístico)
+<li>Para la visualización se usaron todas las variables mencionadas.</li>
+</ul></div>
+
+</div>
+
+<div><h4 id="why-">Why?</h4>
+<ul>
+<li>T1(Action:Present, Target:Distribution) - Presentar coordenadas geográficas en un mapa.</li>
+<li>T2(Action:Identify, Target:Feature) - Identificar coordenadas geográficas cercanas entre sí</li>
+<li>T3(Action:Lookup, Target:Value) - Para una variable categórica (municipio), buscar en un mapa coordenadas geográficas asocidas.</li>
+
+</ul></div>
+
+</div>
+
+
+<div><h4 id="how-">How?</h4>
+
+<div><h4 id="encode">Encode</h4>
+<h5 id="map">Map</h5>
+<ul>
+<li>Mark: Point</li>
+<li>Channel: Position en x para longitud</li>
+<li>Channel: Position en y para latitud  </li>
+<li>Channel: Color hue para tipo zona </li>
+
+</ul></div>
+
+<h5 id='idiom'> Idiom</h5>
+<p>Map </p>
+</div>
+
+
+<div><h4 id="encode">Comentarios</h4>
+<div>
+<p>La vizualición también permite ver que la región occidental del Casanare, es más cercana al centro del país que el resto del departamento,
+situación que podría explicar en gran medida la concentración de lugares turísticos en esta región.</p>
+<p>La prevalencia de lugares turísticos en la región occidental, podría deberse factores como infraestructura vial, topografía, clima o seguridad;
+por lo que sería interesante agregar información de este tipo a la visualización. La visualización también podría mejorarse, agregando estadísticas del sector turismo para departamento.   </p>
+</p>
+</div>
+
+<div>
+<br> MIT License </br>
+<br> Copyright (c) 2019 Oscar Acero.</br>
+<br>
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</br>
+</div>
+
+</html>
+
+
+
+             
