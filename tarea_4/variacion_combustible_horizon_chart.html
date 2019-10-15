@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class='tableauPlaceholder' id='viz1571096887189' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;va&#47;variacion_precio_combustible&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='variacion_precio_combustible&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;va&#47;variacion_precio_combustible&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1571096887189');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+<div class="chart-footer">By <a href="https://twitter.com/OscarAcero_Tato">Oscar Eduardo Acero Acero</a>.
+    <br>
+    <strong>Source</strong>: <a href=https://www.datos.gov.co/Econom-a-y-Finanzas/Precios-de-Combustibles-MinEnerg-a/7pcy-5vx9">Precios de combustibles - MinEnergía.</a>
+  </div>
+
+<p></p>
+<p></p>
+
+<div>
+<p>Se realiza un análisis del What?, el Why? y el How? propuestos en el framework de Tamara para diseñar una visualización.</p>
+<p></p>
+
+<p>Ésta viz permite analizar cómo varían el precio promedio de combustibles por departamento en Colombia.</p>
+
+
+<div><p>Tareas en el dominio del contexto:</p>
+<ul>
+<li>T1(Principal): Presentar cómo varía mensualmente el precio promedio de combustibles en todos los departamentos de Colombia </li>
+<li>T2(Secundaria): Comparar entre departamentos la variación mensual del precio promedio de combustibles</li>
+<li>T3(Secundaria): Identificar patrones asociados a la variación mensual del precio de combustibles.</li>
+</ul></div>
+
+<div><h4 id="what-">What?</h4>
+<p>Se tiene un <a href="https://www.datos.gov.co/Econom-a-y-Finanzas/Precios-de-Combustibles-MinEnerg-a/7pcy-5vx9">dataset</a> de tipo temporal, donde cada ítem corresponde a información de precio de combustibles, asociada a un departamento en un mes específico </p>
+<ul>
+<li>Categóricos: Departamento, Municipio, Nombre Comercial, Bandera, Producto</li>
+<li>Ordinales:Fecha Registro, Periodo. Adicionalmente, a partir del campo Periodo se calcula el campo Mes extrayendo el año y el mes. </li>
+<li>Cuantitativos secuenciales: Precio. Adicionalmente, a patir del campo Precio se calcula el campo Precio Promedio (agregando por Departamento). </li>
+<li>Cuantitativos divergentes: A partir de Precio Promedio se calcula el campo Variación (variación en porcentaje respecto al mes anterior )</li>
+<li>Para la visualización se usaron las variables Departamento, Mes, Precio Promedio y Variación.</li>
+</ul></div>
+
+</div>
+
+<div><h4 id="why-">Why?</h4>
+<ul>
+<li>T1(Action:Present, Target:Trend) - Para una variable categórica (Departamento), presentar como varía en el tiempo una variable cuantitativa divergente(Variación).</li>
+<li>T2(Action:Compare, Target:Trend) - Para una variable categórica (Departamento), comparar como varía en el tiempo una variable cuantitativa divergente (Variación).</li>
+<li>T3(Action:Identify, Target:Features) - Para una variable categórica (Departamento), identificar patrones en la variación de una varibale cuantitativa divergente(Variación) </li>
+
+</ul></div>
+
+</div>
+
+
+<div><h4 id="how-">How?</h4>
+
+<div><h4 id="encode">Encode</h4>
+<h5 id="map">Map</h5>
+<ul>
+<li>Mark: Área</li>
+<li>Channel: Posición en x para Mes </li>
+<li>Channel: Spatial region en y para Departamento</li>
+<li>Channe: Length y para valor de Variación</li>
+<li>Channel: Color hue (orange para aumento y green para disminución)  </li>
+<li>Channel: Color saturation (a mayor valor de Variación mayor saturación)  </li>
+
+</ul></div>
+
+<h5 id='idiom'> Idiom</h5>
+<p>Horizon chart separate, order and align </p>
+</div>
+
+
+<div><h4 id="encode">Comentarios</h4>
+<div>
+<p>Para una persona del común, puede ser interesante descubrir que el precio de los combustibles puede aumentar en algunos departamentos mientras en otros disminuye.</p>
+<p>Sin embargo, se puede ver que en algunos meses como mayo de 2016, octubre de 2017, septiembre y octubre 2018, el precio promedio de los combustibles aumentó en todos los departamentos, en mayor proporción en algunos casos.  </p>
+<p>Adicionalmente, se observa un aumento grande en el precio promedio de combustibles entre junio y julio de 2019  </p>
+<p>La viz podría mejorarse incluyendo otras tareas de análisis, desagregando por tipo de combustible (producto), empresa(bandera) o municipio. </p>
+</div>
+
+<div>
+<br> MIT License </br>
+<br> Copyright (c) 2019 Oscar Acero.</br>
+<br>
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</br>
+</div>
+
+</html>
+
+
+
+             
